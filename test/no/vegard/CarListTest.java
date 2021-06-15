@@ -40,7 +40,31 @@ public class CarListTest {
                 new Car("AS23456", "Red", 250),
                 new Car("AS23420", "Black", 350)
         ));
+        Assertions.assertTrue(carList.contains(new Car("AS23450", "Blue", 150)));
+        Assertions.assertTrue(carList.contains(new Car("AS23456", "Red", 250)));
+        Assertions.assertTrue(carList.contains(new Car("AS23420", "Black", 350)));
+    }
 
+    @Test
+    void testSize() {
+        Assertions.assertEquals(0, carList.size());
+        carList.addAll(List.of(
+                new Car("AS23450", "Blue", 150),
+                new Car("AS23456", "Red", 250),
+                new Car("AS23420", "Black", 350)
+        ));
+        Assertions.assertEquals(3, carList.size());
+    }
+
+    @Test
+    void testRemove() {
+        carList.addAll(List.of(
+                new Car("AS23450", "Blue", 150),
+                new Car("AS23456", "Red", 250),
+                new Car("AS23420", "Black", 350)
+        ));
+        Assertions.assertEquals(3, carList.size());
+        Assertions.assertEquals(new Car("AS23456", "Red", 250), new Car("AS23456", "Red", 250));
     }
 
 }

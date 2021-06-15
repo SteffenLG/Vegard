@@ -10,12 +10,6 @@ import java.util.Objects;
  */
 public class Car {
 
-    public static void main(String[] args) {
-        List<Integer> myIntList = List.of(1,2,3,4,5);
-
-
-    }
-
     private String regNo;
     private String color;
     private int hp;
