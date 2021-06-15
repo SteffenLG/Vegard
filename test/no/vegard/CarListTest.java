@@ -64,7 +64,7 @@ public class CarListTest {
                 new Car("AS23420", "Black", 350)
         ));
         Assertions.assertEquals(3, carList.size());
-        Assertions.assertEquals(new Car("AS23456", "Red", 250), new Car("AS23456", "Red", 250));
+        Assertions.assertEquals(new Car("AS23456", "Red", 250), carList.remove(new Car("AS23456", "Red", 250)));
     }
 
 }
