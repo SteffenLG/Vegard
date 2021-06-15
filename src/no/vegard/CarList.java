@@ -32,7 +32,7 @@ public class CarList {
         throw new RuntimeException("Method not implemented!");
     }
 
-    public List<Car> removeAll() {
+    public List<Car> removeAll(List<Car> cars) {
         throw new RuntimeException("Method not implemented!");
     }
 

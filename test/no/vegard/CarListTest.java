@@ -67,4 +67,20 @@ public class CarListTest {
         Assertions.assertEquals(new Car("AS23456", "Red", 250), carList.remove(new Car("AS23456", "Red", 250)));
     }
 
+    @Test
+    void testGet() {
+
+    }
+
+    @Test
+    void testRemoveString() {
+
+    }
+
+    @Test
+    void testRemoveAll() {
+
+    }
+
+
 }
