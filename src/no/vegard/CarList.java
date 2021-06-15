@@ -28,7 +28,7 @@ public class CarList {
         throw new RuntimeException("Method not implemented!");
     }
 
-    public Car remove(String regNo) {
+    public boolean remove(String regNo) {
         throw new RuntimeException("Method not implemented!");
     }
 

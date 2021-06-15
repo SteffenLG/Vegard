@@ -4,6 +4,8 @@ import no.vegard.ferdig.Car;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class CarListTest {
@@ -79,8 +81,8 @@ public class CarListTest {
     @Test
     void testRemoveString() {
         carList.add(new Car("AS23456", "Red", 250));
-        Assertions.assertEquals(new Car("AS23456", "Red", 250), carList.remove("AS23456"));
-        Assertions.assertEquals(null, carList.remove("AS23456"));
+        Assertions.assertTrue(carList.remove("AS23456"));
+        Assertions.assertFalse(carList.remove("AS23456"));
     }
 
     @Test
@@ -91,14 +93,23 @@ public class CarListTest {
                 new Car("AS23420", "Black", 350)
         ));
 
-        carList.removeAll(List.of(
+        List<Car> toRemove = new ArrayList<>(List.of(
                 new Car("AS23450", "Blue", 150),
-                new Car("AS23456", "Red", 250))
-        );
+                new Car("AS23456", "Red", 250),
+                new Car("AB23456", "Yellow", 99)
+        ));
+
+        List<Car> removed = carList.removeAll(toRemove);
+
+
+
+        List<Car> removedCopy = new ArrayList<>(removed);
+        removed.clear();
 
         Assertions.assertEquals(1, carList.size());
         Assertions.assertEquals(new Car("AS23420", "Black", 350), carList.get(0));
     }
+
 
 
 }
