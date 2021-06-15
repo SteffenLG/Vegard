@@ -7,7 +7,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * This class should represent
+ * This class should represent a list of cars
  */
 public class CarList {
 
@@ -16,6 +16,10 @@ public class CarList {
     }
 
     public void add(Car car) {
+        throw new RuntimeException("Method not implemented!");
+    }
+
+    public Car get(int i) {
         throw new RuntimeException("Method not implemented!");
     }
 
@@ -32,6 +36,10 @@ public class CarList {
     }
 
     public boolean contains(Car car) {
+        throw new RuntimeException("Method not implemented!");
+    }
+
+    public int size() {
         throw new RuntimeException("Method not implemented!");
     }
 
