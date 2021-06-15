@@ -23,7 +23,7 @@ public class CarListTest {
     @Test
     void testAddUnique() {
         carList.add(new Car("AS23450", "Blue", 150));
-        Assertions.assertThrows(Exception.class, () -> carList.add(new Car("AS23450", "Blue", 150)));
+        Assertions.assertThrows(RuntimeException.class, () -> carList.add(new Car("AS23450", "Blue", 150)));
     }
 
     @Test
